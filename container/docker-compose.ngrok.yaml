@@ -1,0 +1,22 @@
+version: "3.0"
+
+services:
+  nginx:
+    restart: always
+    build:
+        context: ./nginx
+        dockerfile: Dockerfile
+    container_name: minera-dev
+    ports:
+        - "8000:8000"
+    volumes: 
+        - ./app:/opt/web
+        - ./web/error_dev:/var/log/nginx
+
+  ngrok:
+    image: wernight/ngrok
+    volumes:
+      - ./ngrok/ngrok.yml:/home/ngrok/.ngrok2/ngrok.yml
+    ports:
+      - "4040:4040"
+    command: ["ngrok", "http", "nginx:8000"]

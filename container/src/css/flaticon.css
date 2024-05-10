@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon.ttf?d0a831ed52304bcd7592563e04490972") format("truetype"),
+url("../fonts/flaticon.woff?d0a831ed52304bcd7592563e04490972") format("woff"),
+url("../fonts/flaticon.woff2?d0a831ed52304bcd7592563e04490972") format("woff2"),
+url("../fonts/flaticon.eot?d0a831ed52304bcd7592563e04490972#iefix") format("embedded-opentype"),
+url("../fonts/flaticon.svg?d0a831ed52304bcd7592563e04490972#flaticon_mining") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-double-quotes:before {
+    content: "\f101";
+}
+.flaticon-phone-call:before {
+    content: "\f102";
+}
+.flaticon-customer-service:before {
+    content: "\f103";
+}
+.flaticon-quality:before {
+    content: "\f104";
+}
+.flaticon-group:before {
+    content: "\f105";
+}
+.flaticon-up-right-arrow:before {
+    content: "\f106";
+}
+.flaticon-play:before {
+    content: "\f107";
+}
+.flaticon-left-quote:before {
+    content: "\f108";
+}
+.flaticon-menu:before {
+    content: "\f109";
+}
+.flaticon-close:before {
+    content: "\f10a";
+}
+.flaticon-loupe:before {
+    content: "\f10b";
+}
+.flaticon-copy:before {
+    content: "\f10c";
+}
+.flaticon-navigation:before {
+    content: "\f10d";
+}
+.flaticon-pickaxe:before {
+    content: "\f10e";
+}
+.flaticon-mining-cart-1:before {
+    content: "\f10f";
+}
+.flaticon-crane-truck:before {
+    content: "\f110";
+}
+.flaticon-gold:before {
+    content: "\f111";
+}
+.flaticon-search:before {
+    content: "\f112";
+}
+.flaticon-engineer:before {
+    content: "\f113";
+}
+.flaticon-notes:before {
+    content: "\f114";
+}
+.flaticon-miner-1:before {
+    content: "\f115";
+}
+.flaticon-phone:before {
+    content: "\f116";
+}
+.flaticon-email:before {
+    content: "\f117";
+}
+.flaticon-technician:before {
+    content: "\f118";
+}
+.flaticon-labor:before {
+    content: "\f119";
+}
+.flaticon-shield:before {
+    content: "\f11a";
+}
+.flaticon-conveyor:before {
+    content: "\f11b";
+}
+.flaticon-management:before {
+    content: "\f11c";
+}
+.flaticon-civil-rights:before {
+    content: "\f11d";
+}
