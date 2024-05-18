@@ -1,0 +1,38 @@
+name: SSH Command Execution
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Connect via SSH and run command
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.WORLD_TICKET_PROD_SERVER }}  # Reemplaza con la dirección del servidor
+        username: ${{ secrets.SSH_USER }}  # Reemplaza con el nombre de usuario para SSH
+        key: ${{ secrets.SSH_MINED_WORLD_US_WEST_2_PROD }}
+        port: 22  # Puerto SSH (generalmente es 22, pero puede variar)
+        script: |
+          echo "Conexión SSH exitosa"
+          if cd /home/${{ secrets.SSH_USER }}/${{ github.event.repository.name }}; then
+            echo "reconstruyendo imagen..."
+          else
+            echo "Clonando imagen..."
+            cd /home/${{ secrets.SSH_USER }}
+            sudo git clone ${{ github.event.repository.ssh_url }}
+            cd /home/${{ secrets.SSH_USER }}/${{ github.event.repository.name }}
+          fi
+          sudo git checkout ${{ github.ref_name }}
+          sudo git pull
+          sudo cp .deployment/.env-develop env.yaml
+          sudo docker compose down
+          sudo docker system prune -a -f --volumes
+          sudo docker compose up -d --build
+          sudo docker restart app.gateway
+          sudo docker restart main.gateway
+          sudo docker ps
