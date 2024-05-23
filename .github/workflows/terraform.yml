@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Validate Dir
-      uses: pwd
+      run: pwd
       
     - name: Checkout
       uses: actions/checkout@v2
