@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Validate Dir
       run: pwd
-      
+
     - name: Checkout
       uses: actions/checkout@v2
 
@@ -24,19 +24,19 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: terraform init
+      run: terraform -chdir="/home/runner/work/mineradev/mineradev/infrastructure" init
 
     - name: Terraform Validate
-      run: terraform validate
+      run: terraform -chdir="/home/runner/work/mineradev/mineradev/infrastructure" validate
 
     - name: Terraform Plan
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: terraform plan
+      run: terraform -chdir="/home/runner/work/mineradev/mineradev/infrastructure" plan
 
     - name: Terraform Apply
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: terraform apply -auto-approve
+      run: terraform -chdir="/home/runner/work/mineradev/mineradev/infrastructure" apply -auto-approve
