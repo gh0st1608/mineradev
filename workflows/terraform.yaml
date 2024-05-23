@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Validate Dir
+      uses: echo pwd
+
     - name: Checkout
       uses: actions/checkout@v2
 
