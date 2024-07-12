@@ -1,2 +1,8 @@
 ./container/ngrok/ngrok.yaml
 ./container/docker-compose.yaml
+test/**
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
+.terraform.lock.hcl
+.terraform/
