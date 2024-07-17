@@ -1,0 +1,141 @@
+$flaticon_mining-font: "flaticon_mining";
+
+@font-face {
+    font-family: $flaticon_mining-font;
+    src: url("./flaticon_mining.ttf?d0a831ed52304bcd7592563e04490972") format("truetype"),
+url("./flaticon_mining.woff?d0a831ed52304bcd7592563e04490972") format("woff"),
+url("./flaticon_mining.woff2?d0a831ed52304bcd7592563e04490972") format("woff2"),
+url("./flaticon_mining.eot?d0a831ed52304bcd7592563e04490972#iefix") format("embedded-opentype"),
+url("./flaticon_mining.svg?d0a831ed52304bcd7592563e04490972#flaticon_mining") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mining !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_mining-map: (
+    "double-quotes": "\f101",
+    "phone-call": "\f102",
+    "customer-service": "\f103",
+    "quality": "\f104",
+    "group": "\f105",
+    "up-right-arrow": "\f106",
+    "play": "\f107",
+    "left-quote": "\f108",
+    "menu": "\f109",
+    "close": "\f10a",
+    "loupe": "\f10b",
+    "copy": "\f10c",
+    "navigation": "\f10d",
+    "pickaxe": "\f10e",
+    "mining-cart-1": "\f10f",
+    "crane-truck": "\f110",
+    "gold": "\f111",
+    "search": "\f112",
+    "engineer": "\f113",
+    "notes": "\f114",
+    "miner-1": "\f115",
+    "phone": "\f116",
+    "email": "\f117",
+    "technician": "\f118",
+    "labor": "\f119",
+    "shield": "\f11a",
+    "conveyor": "\f11b",
+    "management": "\f11c",
+    "civil-rights": "\f11d",
+);
+
+.flaticon-double-quotes:before {
+    content: map-get($flaticon_mining-map, "double-quotes");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon_mining-map, "phone-call");
+}
+.flaticon-customer-service:before {
+    content: map-get($flaticon_mining-map, "customer-service");
+}
+.flaticon-quality:before {
+    content: map-get($flaticon_mining-map, "quality");
+}
+.flaticon-group:before {
+    content: map-get($flaticon_mining-map, "group");
+}
+.flaticon-up-right-arrow:before {
+    content: map-get($flaticon_mining-map, "up-right-arrow");
+}
+.flaticon-play:before {
+    content: map-get($flaticon_mining-map, "play");
+}
+.flaticon-left-quote:before {
+    content: map-get($flaticon_mining-map, "left-quote");
+}
+.flaticon-menu:before {
+    content: map-get($flaticon_mining-map, "menu");
+}
+.flaticon-close:before {
+    content: map-get($flaticon_mining-map, "close");
+}
+.flaticon-loupe:before {
+    content: map-get($flaticon_mining-map, "loupe");
+}
+.flaticon-copy:before {
+    content: map-get($flaticon_mining-map, "copy");
+}
+.flaticon-navigation:before {
+    content: map-get($flaticon_mining-map, "navigation");
+}
+.flaticon-pickaxe:before {
+    content: map-get($flaticon_mining-map, "pickaxe");
+}
+.flaticon-mining-cart-1:before {
+    content: map-get($flaticon_mining-map, "mining-cart-1");
+}
+.flaticon-crane-truck:before {
+    content: map-get($flaticon_mining-map, "crane-truck");
+}
+.flaticon-gold:before {
+    content: map-get($flaticon_mining-map, "gold");
+}
+.flaticon-search:before {
+    content: map-get($flaticon_mining-map, "search");
+}
+.flaticon-engineer:before {
+    content: map-get($flaticon_mining-map, "engineer");
+}
+.flaticon-notes:before {
+    content: map-get($flaticon_mining-map, "notes");
+}
+.flaticon-miner-1:before {
+    content: map-get($flaticon_mining-map, "miner-1");
+}
+.flaticon-phone:before {
+    content: map-get($flaticon_mining-map, "phone");
+}
+.flaticon-email:before {
+    content: map-get($flaticon_mining-map, "email");
+}
+.flaticon-technician:before {
+    content: map-get($flaticon_mining-map, "technician");
+}
+.flaticon-labor:before {
+    content: map-get($flaticon_mining-map, "labor");
+}
+.flaticon-shield:before {
+    content: map-get($flaticon_mining-map, "shield");
+}
+.flaticon-conveyor:before {
+    content: map-get($flaticon_mining-map, "conveyor");
+}
+.flaticon-management:before {
+    content: map-get($flaticon_mining-map, "management");
+}
+.flaticon-civil-rights:before {
+    content: map-get($flaticon_mining-map, "civil-rights");
+}
