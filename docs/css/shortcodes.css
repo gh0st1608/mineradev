@@ -150,6 +150,7 @@
 ------------------------*/
 .bg-img1{
     background-image: url(../images/bg-image/row-bgimage-1.jpg);
+    /*background-image: url(../images/custom/logo.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
 }
