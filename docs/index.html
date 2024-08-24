@@ -107,8 +107,8 @@
                                                         <a href="#" class="mega-menu-link">Productos</a>
                                                         <ul class="mega-submenu"> 
                                                             <li><a href="product.html">Cal Hidratada</a></li>
-                                                            <li><a href="product2.pdf">Cal Viva Gruesa</a></li>
-                                                            <li><a href="product3.pdf">Cal Viva Fina</a></li>
+                                                            <li><a href="product2.html">Cal Viva Gruesa</a></li>
+                                                            <li><a href="product3.html">Cal Viva Fina</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
@@ -1079,6 +1079,23 @@
         AOS.init({
             offset: 120,
             duration: 400,
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.btn-show-menu-mobile');
+            const menu = document.querySelector('#menu');
+
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('open');
+            });
+
+            // Cerrar el menú cuando se hace clic en un enlace
+            const menuLinks = document.querySelectorAll('#menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menu.classList.remove('open');
+                });
+            });
         });
       </script>
     <!-- Javascript end-->
