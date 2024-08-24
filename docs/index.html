@@ -98,10 +98,10 @@
                                             <nav class="main-menu menu-mobile" id="menu">
                                                 <ul class="menu">
                                                     <li class="mega-menu-item active">
-                                                        <a href="index.html" class="mega-menu-link">Home</a>
+                                                        <a href="index.html" class="mega-menu-link" onclick="window.location.href='index.html'">Home</a>
                                                     </li>
                                                     <li class="mega-menu-item">
-                                                        <a href="nosotros.html" class="mega-menu-link">Nosotros</a>
+                                                        <a href="nosotros.html" class="mega-menu-link" onclick="window.location.href='nosotros.html'">Nosotros</a>
                                                     </li>
                                                     <li class="mega-menu-item">
                                                         <a href="#" class="mega-menu-link">Productos</a>
@@ -1081,20 +1081,13 @@
             duration: 400,
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.btn-show-menu-mobile');
-            const menu = document.querySelector('#menu');
-
-            menuToggle.addEventListener('click', function() {
-                menu.classList.toggle('open');
-            });
-
-            // Cerrar el menú cuando se hace clic en un enlace
-            const menuLinks = document.querySelectorAll('#menu a');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    menu.classList.remove('open');
-                });
+        document.querySelectorAll('.mega-menu-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Asegúrate de que no haya lógica que bloquee el enlace
+                // Por ejemplo:
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                }
             });
         });
       </script>
