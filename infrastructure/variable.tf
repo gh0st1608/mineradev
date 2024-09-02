@@ -22,6 +22,6 @@ variable "godaddy_api_secret" {
   type = string
 }
 
-variable "domain" {
+variable "domain_name" {
   type = string
 }

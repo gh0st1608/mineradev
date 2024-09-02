@@ -24,24 +24,6 @@ resource "aws_s3_bucket_ownership_controls" "bucket_ownership_controls_miningscu
 
 }
 
-/* resource "aws_s3_bucket_policy" "this" {
-  bucket = aws_s3_bucket.miningsculture.id
-
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Id      = "AllowGetObjects"
-    Statement = [
-      {
-        Sid       = "AllowPublic"
-        Effect    = "Allow"
-        Principal = "*"
-        Action    = "s3:GetObject"
-        Resource  = "${aws_s3_bucket.miningsculture.arn}/**"
-      }
-    ]
-  })
-} */
-
 resource "aws_s3_bucket_public_access_block" "bucket_public_access_block_miningsculture" {
   bucket = aws_s3_bucket.miningsculture.id
 

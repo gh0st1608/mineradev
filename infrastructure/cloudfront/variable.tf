@@ -3,8 +3,13 @@ variable "bucket_regional_domain_name" {
 }
 
 variable "certificate_miningsculture_arn" {
-  type = string
+  type = any
 }
 
-variable "certificate_miningsculture" {
+variable "certificate_miningsculture_resource" {
+  type = any
 }
+
+/* variable "route53_miningsculture_resource" {
+  type = any
+} */

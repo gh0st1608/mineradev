@@ -1,6 +1,8 @@
+
+
 resource "aws_cloudfront_distribution" "my-distribution" {
   origin {
-    domain_name              = var.bucket_regional_domain_name
+    domain_name = var.bucket_regional_domain_name
     origin_id   = "S3-Origin"
 
     custom_origin_config {
@@ -9,6 +11,12 @@ resource "aws_cloudfront_distribution" "my-distribution" {
       origin_protocol_policy = "http-only"
       origin_ssl_protocols   = ["TLSv1"]
     }
+
+    s3_origin_config {
+      origin_access_identity = aws_cloudfront_origin_access_identity.my_oai.cloudfront_access_identity_path
+    }
+
+
   }
 
 
@@ -21,7 +29,6 @@ resource "aws_cloudfront_distribution" "my-distribution" {
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "S3-Origin"
-
     viewer_protocol_policy = "redirect-to-https"
 
     min_ttl = 0
@@ -41,7 +48,7 @@ resource "aws_cloudfront_distribution" "my-distribution" {
 
   viewer_certificate {
     //acm_certificate_arn = var.certificate_miningsculture_arn
-    acm_certificate_arn = "${var.certificate_miningsculture_arn}"
+    acm_certificate_arn = var.certificate_miningsculture_arn
     ssl_support_method = "sni-only"
   }
 
@@ -53,10 +60,20 @@ resource "aws_cloudfront_distribution" "my-distribution" {
   }
 
   depends_on = [
-    var.certificate_miningsculture
+    var.certificate_miningsculture_resource,
+    
   ]
+
+  tags = {
+    Name        = "my-cloudfront-distribution"
+    Environment = "dev"
+  }
+
 }
 
-output "cloudfront_url" {
-  value = aws_cloudfront_distribution.my-distribution.domain_name
+# Crear un Origin Access Identity para CloudFront
+resource "aws_cloudfront_origin_access_identity" "my_oai" {
+  comment = "OAI for S3 bucket"
 }
+
+
