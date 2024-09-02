@@ -42,19 +42,19 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="top_bar_inner text-base-white">
-                                <!-- site-branding
+                                <!-- site-branding -->
                                 <div class="site-branding">
                                     <h1><a class="home-link" href="index.html" title="Minemo" rel="home">
-                                        <img id="logo-img" height="45" width="224" class="img-fluid auto_size" src="images/logo-light.svg" alt="logo-img">
-                                    </a></h1>                                        
-                                </div>site-branding end -->
+                                        <!--<img id="logo-img" height="45" width="224" class="img-fluid auto_size" src="images/logo-light.svg" alt="logo-img">-->
+                                    </a></h1>                                     
+                                </div><!-- site-branding end -->
                                 <div class="top_bar_contact_item with-icon top_bar_address ms-auto">
                                     <div class="top_bar_icon"><i class="fa fa-thumb-tack"></i></div>
                                     <span>Direccion: Lima, Trujillo, Huamachuco.</span>
                                 </div>
                                 <div class="top_bar_contact_item with-icon top_bar_call">
                                     <div class="top_bar_icon"><i class="fa fa-phone"></i></div>
-                                    <span>Llamanos:</span><span class="topbar_icon-txt"><a class="text-base-skin" href="tel:+511921453564"> (+51)921453564</a></span>
+                                    <span>Llamanos:</span><span class="topbar_icon-txt"><a class="text-base-skin" href="tel:+511921453564"> (+51) 921 453 564</a></span>
                                 </div>
                                 <div class="top_bar_contact_item top_bar_social">
                                     <ul class="social-icons">
@@ -82,7 +82,7 @@
                                 <div class="site-navigation">
                                     <div class="site-branding site-branding-02  me-auto">
                                         <a class="home-link" href="index.html" title="Minemo" rel="home">
-                                            <img id="logo-imgs" height="45" width="224" class="img-fluid auto_size" src="images/logo-light.svg" alt="logo-img">
+                                            <!--<img id="logo-imgs" height="45" width="224" class="img-fluid auto_size" src="images/logo-light.svg" alt="logo-img">-->
                                         </a> 
                                     </div>
                                     <div class="">
@@ -95,13 +95,13 @@
                                             <!-- menu -->
                                             <nav class="main-menu menu-mobile" id="menu">
                                                 <ul class="menu">
-                                                    <li class="mega-menu-item active">
-                                                        <a href="index.html" class="mega-menu-link">Home</a>
+                                                   <li class="mega-menu-item active">
+                                                        <a href="index.html" class="mega-menu-link" onclick="window.location.href='index.html'">Home</a>
                                                     </li>
                                                     <li class="mega-menu-item">
-                                                        <a href="nosotros.html" class="mega-menu-link">Nosotros</a>
+                                                        <a href="nosotros.html" class="mega-menu-link" onclick="window.location.href='nosotros.html'">Nosotros</a>
                                                     </li>
-                                                     <li class="mega-menu-item">
+                                                    <li class="mega-menu-item">
                                                         <a href="#" class="mega-menu-link">Productos</a>
                                                         <ul class="mega-submenu"> 
                                                             <li><a href="product.html">Cal Hidratada</a></li>
@@ -175,7 +175,7 @@
                      <div class="row mt-50">
                         <!-- PDF Preview Start -->
                         <div class="col-lg-12">
-                            <iframe src="cal_viva_fina.pdf" width="100%" height="1200px"></iframe>
+                            <iframe src="cal_viva_fina.pdf" class="pdf-container" width="100%" height="1200px"></iframe>
                         </div>
                         <!-- PDF Preview End -->
                     </div>
@@ -233,4 +233,28 @@
         <!--footer end-->
     </div><!-- page end -->
 </body>
-</html>
+    <!-- Javascript -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-migrate-3.3.2.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script> 
+    <script src="js/jquery-validate.js"></script> 
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery-waypoints.js"></script>    
+    <script src="js/numinate.min.js"></script>
+    <script src="js/cursor.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/splittext.min.js"></script>
+    <script src="js/scrolltrigger.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/aos.js"></script>
+      <script>
+        AOS.init({
+            offset: 120,
+            duration: 400,
+        });
+      </script>
+    <!-- Javascript end--> 
+</html> 
