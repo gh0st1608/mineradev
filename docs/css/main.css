@@ -223,6 +223,7 @@ menu, ol, ul {
     --base-white: #62f345;    
     --base-headingfont: 'Krona One', sans-serif;
     --base-headingfont-color: #000000;
+    --base-blue: #61bde7;
 }
 
 /** Typo Colors **/
@@ -239,7 +240,8 @@ menu, ol, ul {
 .bg-base-grey { background-color: var(--base-grey);}
 .bg-base-lightgrey { background-color: var(--base-lightgrey);}
 .bg-base-white { background-color: var(--base-white);}
-  
+.bg-base-blue { background-color: var(--base-blue);} 
+
 /** Text Colors **/
 .text-base-skin { color: var(--base-skin) !important;}
 .text-base-skin-02 { color: var(--base-skin-02) !important;}
@@ -346,6 +348,18 @@ body .site-main {
 }
 body .site-main.bg-white{
     background-color: #fff !important;
+}
+
+body .site-main.bg-red{
+    background-color: #e76161 !important;
+}
+
+body .site-main.bg-skin{
+    background-color: #e7d361 !important;
+}
+
+body .site-main.bg-blue{
+    background-color: #61bde7 !important;
 }
 
 body .page.sidebar-true .site-main{ 
@@ -2278,6 +2292,46 @@ span.marque-text i {
     justify-content: space-between;
     align-items: center;
 }
+.prt-page-title-row-inner_1 { 
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 100px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efb810
+}
+.prt-page-title-row-inner_2 { 
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 100px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00d2ff
+}
+.prt-page-title-row-inner_3 { 
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 100px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #62f345
+}
+.prt-page-title-row-inner_4 { 
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 100px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #45e2f3
+}
 .prt-page-title-row-heading{border-bottom: 1px solid #000;}
 .page-title-heading h2 {
     font-size: 70px;
@@ -2918,7 +2972,7 @@ article.prt-blog-classic .prt-blog-classic-content{
 .contact-title h3{
     font-size: 20px;
     line-height: 30px;
-    color: #fff;
+    color: #000;
     margin-bottom: 0;
     margin-left: 30px;
 }
