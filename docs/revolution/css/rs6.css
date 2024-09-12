@@ -231,7 +231,7 @@ rs-module .sr-only-focusable:focus,
 .tp-fullwidth-forcer { z-index: 0; pointer-events: none}
 rs-module-wrap { visibility: hidden }
 rs-module-wrap,
-rs-module-wrap * { box-sizing: border-box; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+rs-module-wrap * { box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 
 rs-module-wrap {position:relative;z-index: 1;width:100%; display: block;}
 
@@ -309,7 +309,6 @@ rs-module .rs-layer {
 	white-space: nowrap;
 	display: block;
 	-webkit-font-smoothing: antialiased !important;
-	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 	-moz-osx-font-smoothing: grayscale;
 	z-index:1;
 	font-display: swap;
