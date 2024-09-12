@@ -910,7 +910,7 @@ body .page.sticky-column {
 	section.error-404 h2.page-title-text { font-size: 120px; margin-top: -65px;}
 	.prt-pfbox-view-style5 .prt-box-title h3 {font-size: 36px;line-height: 46px;}
 	.footer-marquebox-wrapper .prt-marquebox-style1,
-	.prt-marquebox-style1 {animation: prt-marque-text 2s linear infinite;}
+	.prt-marquebox-style1 {animation: prt-marque-text 12s linear infinite;}
 	.about-section.border-rad_10.mr-20 img{width: 100%;}
 	.featured-imagebox-services.style3 .featured-content .featured-title h3,
 	.featured-imagebox-services.style4 .featured-content .featured-title h3 {
